@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/nodemon --delay 5 dist/index",
-    "gulp": "node_modules/.bin/gulp"
+    "dev": "set NODE_ENV=development && nodemon --delay 5 dist/index",
+    "gulp": "node_modules/.bin/gulp",
+    "gulp-build": "node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,11 @@
     "@types/express-graphql": "0.0.34",
     "@types/graphql": "^0.11.5",
     "@types/node": "^8.0.34",
+    "@types/sequelize": "^4.0.76",
     "gulp": "3.9.1",
     "gulp-clean": "0.3.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-typescript": "3.2.2",
     "nodemon": "1.12.0",
     "typescript": "2.5.3"
@@ -35,6 +39,8 @@
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7",
-    "graphql-tools": "^2.3.0"
+    "graphql-tools": "^2.3.0",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.13.10"
   }
 }

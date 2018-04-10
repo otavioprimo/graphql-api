@@ -6,7 +6,11 @@ Install all dependencies
  
  Then run gulp to compile the typescript
  
-  - npm run gulp
+  - npm run dev
+
+ For production
+
+  - npm run build
   
  After this, the server will listening the port 3000 on localhost
  

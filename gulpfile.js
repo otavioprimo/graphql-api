@@ -47,24 +47,13 @@ if (isProduction) {
         return gulp.watch(['src/**/*.ts', 'src/**/*.json'], ['build']);
     });
 
-    //Abre o browser na url local
-    gulp.task('browser', function () {
-        var options = {
-            uri: 'http://localhost:3000/graphql',
-            app: 'chrome'
-        };
-
-        //Abre o browser depois de 1 segundo, para dar tempo de carregar o servidor
-        setTimeout(() => {
-            gulp.src(__filename)
-                .pipe(open(options));
-        }, 1000);
-    });
-
     //Reinicia o server com nodemon sempre que terminar a compilação
-    gulp.task('default', ['watch','browser'], () => {
+    gulp.task('default', ['watch'], () => {
         // listen for changes
         livereload.listen();
+
+        openInBrowser(); //Abre o localhost no browsers
+
         // configure nodemon
         nodemon({
             // the script to run the app
@@ -77,4 +66,14 @@ if (isProduction) {
                 .pipe(livereload());
         });
     });
+}
+
+function openInBrowser() {
+    var options = {
+        uri: 'http://localhost:3000/graphql'
+        // app: 'chrome'
+    };
+
+    gulp.src(__filename)
+        .pipe(open(options));
 }

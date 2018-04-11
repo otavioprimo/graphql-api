@@ -14,3 +14,4 @@ db.sequelize.sync()
         
         server.on('listening', onListening(server));
     });
+    

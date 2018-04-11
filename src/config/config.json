@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "5886630",
-    "database": "gralphql_blog_development",
-    "host": "127.0.0.1",
+    "username": "bb6ac62c281ef2",
+    "password": "77e39c0d",
+    "database": "heroku_a201f539b607d6f",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"
   },
   "test": {

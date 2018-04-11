@@ -52,7 +52,9 @@ if (isProduction) {
         // listen for changes
         livereload.listen();
 
-        openInBrowser(); //Abre o localhost no browsers
+        setTimeout(() => {
+            openInBrowser(); //Abre o localhost no browsers
+        }, 1500);
 
         // configure nodemon
         nodemon({

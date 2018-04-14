@@ -1,5 +1,5 @@
 import { DbConnection } from './../interfaces/DbConnectionInterface';
-import { PostAttributes } from './PostModel';
+
 import * as fs from 'fs';
 import * as path from 'path';
 import * as Sequelize from 'sequelize';
